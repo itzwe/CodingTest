@@ -96,5 +96,5 @@ function reduce(predicate, val){
  let answer = a.reduce(function(acc, v){
     return acc+v;  
  }, 0) => acc 는 누적값 , 0은 초기값, v는 원본 배열의 요소 값 
- return 값은 초기값 0에서 시작해 , 이후 첫 배열의 요소값인 10에서 마지막 요소값인 15 까지 순차적으로 누적 시킨 결과 값이
+ return 값은 초기값 0에서 시작해 , 이후 첫 배열의 요소값인 10에서 마지막 요소값인 15 까지 순차적으로 누적 시킨 결과 값이 담김
 ```
