@@ -6,5 +6,15 @@ function solution(s){
   return answer;
 }
 
-let str="BANANASDWAASDSCAA";
-console.log(solution(str));
+// 두번째 방법
+// function solution(s){
+//   let answer = "";
+//   for(let x of s){ 
+//     if(x==='A') answer +='#';
+//     else answer+=x;
+//   }
+    // return answer;
+// }
+
+// let str="BANANA";
+// console.log(solution(str));
