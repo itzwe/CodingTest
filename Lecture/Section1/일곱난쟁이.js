@@ -14,13 +14,16 @@
 function solution(arr) {
   let result = arr;
   let sum= result.reduce((a, b)=>a+b, 0);
+  let flag = 0;
   for(let i=0; i<8; i++){
     for(let j=i+1; j<9; j++){
       if((sum-(result[i]+result[j])) == 100){
         result.splice(j, 1);  // 뒷자리 index인 j 부터 splice 해줘야함
         result.splice(i, 1); // i 먼저 splice 하면 원래 제거하고자 했던 j의 인덱스보다 +1 인 인덱스를 제거함.
+        break;
       }
     }
+    if(flag == 1) break;
   }
 
   return result;
