@@ -3,7 +3,7 @@
 // 문자열의 길이는 100을 넘지 않습니다.
 
 function solution(s, t){
-  // let answer = s.split(t).length;
+  // let answer = s.split(t).length; => 구분자 사용 방법
   // return answer -1;
   let answer = 0;
   for(let x of s){
