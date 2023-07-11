@@ -42,7 +42,7 @@ function map(predicate, thisArg){
 ## ex
 ``` 
  a = [10, 11, 12, 13 ,14 ,15]; 
-  let answer = a.filter(function(v, i){
+  let answer = a.map(function(v, i){
     return v%2==0;
  })  => answer 에는 [10, undefined, 12, undefined, 14, undefined] 가 담김
 
