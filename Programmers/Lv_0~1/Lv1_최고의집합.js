@@ -15,4 +15,14 @@
 // 자연수의 개수 n은 1 이상 10,000 이하의 자연수입니다.
 // 모든 원소들의 합 s는 1 이상, 100,000,000 이하의 자연수입니다.
 
+function solution(n, s) {
+  if( s === 1 || n>s) return [-1];
 
+  let arr = Array(n).fill(null).map(()=>parseInt(s/n));
+
+  for(let i=n-1; i>=n - s%n ; i--){
+      arr[i]++;
+  }
+
+  return arr;
+}
