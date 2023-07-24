@@ -1,4 +1,4 @@
-## 빈 배열('') 제거하기
+## 배열 안 빈 문자열('') 제거하기
 ```
 let str = ['','','abc','de'];
 let result =str.filter(el=>el);
