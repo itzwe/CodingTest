@@ -10,8 +10,19 @@
 // 공백문자가 연속해서 나올 수 있습니다.
 
 function solution(s) {
-  const answer = s.split(' ').map(sentence => sentence.replace(/\w/g,(t,idx)=>{
-      return idx === 0 ? t.toUpperCase() : t.toLowerCase()
-  })).join(' ')
-  return answer
+  let split = s.split(' ')
+  let answer = [];
+  for(let i =0; i<split.length; i++){
+      for(let j =0; j<split[i].length; j++){
+          if(j === 0){
+              answer.push(split[i][0].toUpperCase())
+          }else{
+              answer.push(split[i][j].toLowerCase())
+          }
+      }
+      if(i !== split.length-1){  //마지막 인덱스에서는 공백 x
+          answer.push(' ')
+      }
+  }
+  return answer.join('');
 }
