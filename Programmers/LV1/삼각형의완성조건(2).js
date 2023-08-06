@@ -5,11 +5,17 @@
 
 
 function solution(num) {
-  let result = 0;
-  if(num[0]>num[1]){
-      result = (num[0]-(num[0]-num[1])) + ((num[0]+num[1])-(num[0]+1))
-  }else{
-      result = (num[1]-(num[1]-num[0])) + ((num[1]+num[0])-(num[1]+1))
-  }
-  return result;
+  // let result = 0;
+  // if(num[0]>num[1]){
+  //     result = (num[0]-(num[0]-num[1])) + ((num[0]+num[1])-(num[0]+1))
+  // }else{
+  //     result = (num[1]-(num[1]-num[0])) + ((num[1]+num[0])-(num[1]+1))
+  // }
+  // return result;
+
+  // 수정 코드
+  let num2 = [...num].sort((a,b)=>b-a);
+  let answer = num2[1]*2 - 1;
+
+    return answer;
 }
