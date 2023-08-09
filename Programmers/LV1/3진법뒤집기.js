@@ -4,3 +4,23 @@ function solution(n) {
   let answer = parseInt(n.toString(3).split('').reverse().join(''), 3)
   return answer;
 }
+
+// 내장함수 사용 x 시
+// function solution(n) {
+//   var answer = 0;
+//   let res = []
+
+//   const run = (num) => {
+
+//       if (num < 3) {
+//           res.push(num)
+//           return 
+//       }
+//       res.push(num % 3)
+//       return run(Math.floor(num/3))
+//   }
+
+//   run(n)
+
+//   return res.map((a,i) => a * 3 **(res.length - 1 - i)).reduce((r,a) => r + a)
+// }
