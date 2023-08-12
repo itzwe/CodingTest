@@ -36,7 +36,7 @@ function solution(N, stages) {
           if (a[1] === b[1]) {
               return b[0] - a[0];
               }
-          a[1]-b[1]
+          return a[1]-b[1];
       });
       answer.unshift(sPer[i][0]);
   }
