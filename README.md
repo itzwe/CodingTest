@@ -54,3 +54,24 @@ let decimal = parseInt(hex, 16);	// 16진수에서 10진수로
   return a[1] - b[1] ;
  })  // => 출력 : [[1,10], [5,15], [4,15], [3,20], [2,30]];
  ```
+
+ ## 배열 동등 비교
+ ```
+const a = [1, 2, 3];
+const b = [1, 2, 3];
+
+a == b; // false
+a === b; // false
+
+// 첫 번째 방법
+const equals = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+ equals(a, b); // true
+
+ //두 번째 방법
+ const equals = (a, b) => a.length === b.length && a.every((v, i) => v === b[i]); 
+equals(a, b); // true
+// 두 번째 방법에서 순서 상관없이 동일한지 비교 하는 방법
+a.sort();
+b.sort();
+equals(a, b); // true
+ ```
