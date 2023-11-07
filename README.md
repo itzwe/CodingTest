@@ -75,3 +75,9 @@ a.sort();
 b.sort();
 equals(a, b); // true
  ```
+
+ ## 배열의 중복값 제걱
+ ```
+ let arr = [1,1,3,3,5,5] 
+ let newArr = [...new Set(arr)]; // [1,3,5];
+ ```
