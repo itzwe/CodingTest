@@ -76,7 +76,7 @@ b.sort();
 equals(a, b); // true
  ```
 
- ## 배열의 중복값 제걱
+ ## 배열의 중복값 제거
  ```
  let arr = [1,1,3,3,5,5] 
  let newArr = [...new Set(arr)]; // [1,3,5];
